@@ -4,16 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "migrate": "npx prisma migrate dev"
+     "migrate": "npx prisma migrate dev",
+     "studio":"npx prisma studio"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.9",
-    "prisma": "^5.16.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "prisma": "^5.16.1"
   },
   "dependencies": {
     "@prisma/client": "^5.16.1"
