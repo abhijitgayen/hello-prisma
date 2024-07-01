@@ -17,25 +17,25 @@ async function main() {
   // console.log(users)
 
   // Explore relation queries
-  // const user = await prisma.user.create({
-  //   data: {
-  //     name: 'Bob',
-  //     email: 'bob@prisma.io',
-  //     posts: {
-  //       create: [
-  //         {
-  //           title: 'Hello World',
-  //           published: true
-  //         },
-  //         {
-  //           title: 'My second post',
-  //           content: 'This is still a draft'
-  //         }
-  //       ],
-  //     },
-  //   },
-  // })
-  // console.log(user)
+  const user = await prisma.user.create({
+    data: {
+      name: 'Bob',
+      email: 'bob@prisma.io',
+      posts: {
+        create: [
+          {
+            title: 'Hello World',
+            published: true
+          },
+          {
+            title: 'My second post',
+            content: 'This is still a draft'
+          }
+        ],
+      },
+    },
+  })
+  console.log(user)
 
   // get users with post
   const usersWithPosts = await prisma.user.findMany({
